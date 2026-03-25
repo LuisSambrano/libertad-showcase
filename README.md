@@ -127,6 +127,7 @@ La plataforma no funciona como un medio tradicional con redacción cerrada. Impl
 | **Reportero ciudadano** | Complementa reportes con fotografías, documentos o testimonios cruzados. | Historial de reportes verificados. |
 | **Verificador** | Participa en el contraste de información con fuentes independientes. | Por invitación del equipo editorial. |
 | **Periodista** | Redacta, contextualiza y publica artículos con base en reportes verificados. | Credenciales profesionales validadas. |
+| **Administrador** | Gestiona la plataforma, aprueba roles avanzados y supervisa el Registro de Memoria Cívica. | Equipo fundador. |
 
 Cada reporte que supera el proceso de verificación genera **+50 puntos de experiencia** para su autor. Esos puntos construyen un **índice de confianza** interno, medible y auditable. El sistema prioriza información de fuentes con historial comprobado, sin necesidad de conocer la identidad civil del ciudadano.
 
@@ -240,7 +241,7 @@ La selección de cada componente respondió a un criterio: **resiliencia operati
 
 ## 6. Postura de Seguridad
 
-La plataforma opera bajo la premisa de que sus fuentes podrían enfrentar represalias si su participación fuera expuesta. Las decisiones de seguridad están documentadas en detalle en [SEGURIDAD.md](./SECURITY.md).
+La plataforma opera bajo la premisa de que sus fuentes podrían enfrentar represalias si su participación fuera expuesta. Las decisiones de seguridad están documentadas en detalle en [SECURITY.md](./SECURITY.md).
 
 Principios operativos:
 
@@ -250,7 +251,7 @@ Principios operativos:
 - Registro de auditoría inmutable sobre acciones editoriales y administrativas.
 - El modelo de amenazas contempla actores estatales con capacidad de interceptación de tráfico y presión legal.
 
-Consulte [SEGURIDAD.md](./SECURITY.md) para información completa sobre nuestro modelo de amenazas, clasificación de datos, protocolos de respuesta a incidentes y programa de divulgación de vulnerabilidades.
+Consulte [SECURITY.md](./SECURITY.md) para información completa sobre nuestro modelo de amenazas, clasificación de datos, protocolos de respuesta a incidentes y programa de divulgación de vulnerabilidades.
 
 ---
 
@@ -258,7 +259,7 @@ Consulte [SEGURIDAD.md](./SECURITY.md) para información completa sobre nuestro 
 
 El código fuente de Libertad VZLA es propietario bajo licencia **Business Source License 1.1 (BSL 1.1)**. El acceso al repositorio de desarrollo es por invitación.
 
-Consulte [CONTRIBUCIÓN.md](./CONTRIBUTING.md) para conocer nuestro modelo de participación, requisitos de seguridad y proceso de contacto.
+Consulte [CONTRIBUTING.md](./CONTRIBUTING.md) para conocer nuestro modelo de participación, requisitos de seguridad y proceso de contacto.
 
 ---
 
