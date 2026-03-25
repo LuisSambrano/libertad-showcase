@@ -227,9 +227,32 @@ En caso de acción legal, Libertad VZLA podrá reclamar:
 - Daño moral al equipo editorial y a las personas afectadas.
 - Medidas cautelares (cesación inmediata de la actividad infractora).
 
-### 8.4. Cooperación con Autoridades
+### 8.4. Cooperación con Organismos Internacionales
 
-Libertad VZLA cooperará con las autoridades competentes, organismos internacionales de derechos humanos y entidades de ciberseguridad en la investigación de ataques contra la plataforma, siempre que dicha cooperación no comprometa la identidad de las fuentes ni la confidencialidad de los datos clasificados como Nivel 1.
+Libertad VZLA cooperará con organismos internacionales competentes en la investigación de ataques contra la plataforma, la persecución de delitos informáticos y la documentación de violaciones a la libertad de prensa. **Esta cooperación nunca comprometerá la identidad de las fuentes ni la confidencialidad de los datos clasificados como Nivel 1.**
+
+#### Cooperación en Ciberdelincuencia y Delitos Informáticos
+
+- **INTERPOL** — Organización Internacional de Policía Criminal: cooperación en investigaciones transfronterizas de ciberdelitos, bajo el marco del Convenio de Budapest sobre Ciberdelincuencia (2001). — [interpol.int](https://www.interpol.int)
+- **IC3** — Internet Crime Complaint Center (FBI, EE.UU.): recepción de denuncias sobre delitos cibernéticos con alcance internacional. — [ic3.gov](https://www.ic3.gov)
+- **CERT/CC** — Computer Emergency Response Team (Carnegie Mellon / CISA): coordinación de respuesta a incidentes de seguridad informática y divulgación de vulnerabilidades. — [cert.org](https://www.cert.org)
+- **FIRST** — Forum of Incident Response and Security Teams: red global de equipos de respuesta a incidentes de seguridad, con protocolos estandarizados de coordinación. — [first.org](https://www.first.org)
+- **ENISA** — Agencia de la Unión Europea para la Ciberseguridad: cooperación técnica bajo el marco del RGPD y la Directiva NIS 2. — [enisa.europa.eu](https://www.enisa.europa.eu)
+
+#### Cooperación en Protección de la Prensa y Libertad de Expresión
+
+- **CPJ** — Committee to Protect Journalists (Comité para la Protección de los Periodistas): documentación de agresiones contra periodistas, asistencia legal y programas de emergencia para profesionales en riesgo. — [cpj.org](https://cpj.org)
+- **RSF** — Reporteros Sin Fronteras (Reporters Without Borders): documentación de violaciones a la libertad de prensa, alertas internacionales y clasificación mundial. — [rsf.org](https://rsf.org)
+- **Access Now** — Organización de defensa de derechos digitales: asistencia técnica en casos de censura digital, bloqueos de internet y vigilancia estatal. Opera la línea de ayuda Digital Security Helpline. — [accessnow.org](https://www.accessnow.org)
+- **IPYS Venezuela** — Instituto Prensa y Sociedad: documentación de violaciones a la libertad de prensa en Venezuela, alertas y acompañamiento a periodistas amenazados. — [ipysvenezuela.org](https://ipysvenezuela.org)
+
+#### Cooperación en Derechos Humanos
+
+- **ACNUDH / OHCHR** — Oficina del Alto Comisionado de las Naciones Unidas para los Derechos Humanos: documentación de violaciones de derechos humanos y activación de mecanismos de protección. — [ohchr.org](https://www.ohchr.org)
+- **CIDH** — Comisión Interamericana de Derechos Humanos (OEA): recepción de peticiones individuales, medidas cautelares y relatorías especiales (Relatoría Especial para la Libertad de Expresión). — [oas.org/es/cidh](https://www.oas.org/es/cidh/)
+- **Corte IDH** — Corte Interamericana de Derechos Humanos: jurisdicción contenciosa y consultiva en materia de derechos humanos en el sistema interamericano. — [corteidh.or.cr](https://www.corteidh.or.cr)
+- **Foro Penal** — Organización venezolana de asistencia jurídica a víctimas de persecución política: documentación de detenciones arbitrarias y presos políticos. — [foropenal.com](https://foropenal.com)
+- **PROVEA** — Programa Venezolano de Educación-Acción en Derechos Humanos: monitoreo y documentación de la situación de derechos humanos en Venezuela. — [provea.org](https://provea.org)
 
 ---
 
