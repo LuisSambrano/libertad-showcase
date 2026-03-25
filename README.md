@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="https://libertadvzla.vercel.app"><img src="https://img.shields.io/badge/Plataforma_en_Vivo-libertadvzla.vercel.app-black?style=for-the-badge&logo=vercel" alt="Deploy"/></a>
-  <img src="https://img.shields.io/badge/Estado-Producción_(Q1_2026)-green?style=for-the-badge" alt="Estado"/>
+  <img src="https://img.shields.io/badge/Estado-Beta_Cerrada_(Abril_2026)-orange?style=for-the-badge" alt="Estado"/>
   <img src="https://img.shields.io/badge/Licencia-BSL_1.1-red?style=for-the-badge" alt="Licencia"/>
 </p>
 
@@ -108,9 +108,14 @@ gantt
     Pruebas con fuentes reales y redactores                :done,    p2, 2026-01-01, 2026-02-28
     Documentación de protocolos operativos                 :done,    p3, 2026-01-15, 2026-02-28
 
+    section Beta Cerrada
+    Convocatoria privada (abogados, psicólogos, periodistas, ciudadanos) :active, b1, 2026-04-01, 2026-04-30
+    Pruebas de campo con grupo cerrado                     :active,  b2, 2026-04-01, 2026-04-30
+    Ajustes basados en retroalimentación de la beta        :         b3, 2026-04-15, 2026-04-30
+
     section Salida a Producción
-    Despliegue — 1 de marzo de 2026                        :active,  l1, 2026-03-01, 2026-03-01
-    Operación continua y expansión de la red               :         l2, 2026-03-01, 2026-12-31
+    Lanzamiento público — 1 de mayo de 2026                :         l1, 2026-05-01, 2026-05-01
+    Operación continua y expansión de la red               :         l2, 2026-05-01, 2026-12-31
 ```
 
 ---
