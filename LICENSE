@@ -10,45 +10,100 @@
 
 ---
 
-## 1. Términos de la Licencia
+## 1. Concesión de Derechos
 
-### 1.1. Concesión de Derechos
-
-Sujeto a los términos y condiciones de esta Licencia, el Licenciante otorga al Licenciatario un derecho no exclusivo, mundial y libre de regalías para copiar, modificar, crear obras derivadas, redistribuir y hacer uso no productivo del Software con licencia.
-
-### 1.2. Limitación de Uso
-
-El Licenciatario **no podrá** utilizar el Software con licencia para un **Uso de Producción** sin el consentimiento previo por escrito del Licenciante.
-
-**Uso de Producción** se define como el uso del Software con licencia para propósitos que no sean de evaluación interna, desarrollo, pruebas o propósitos educativos. Esto incluye, sin limitación: ofrecer el Software como servicio, integrarlo en productos comerciales o utilizar sus funcionalidades en entornos de producción orientados a usuarios finales.
-
-### 1.3. Fecha de Cambio
-
-A partir de la **Fecha de Cambio** (1 de marzo de 2030), el Software con licencia estará disponible bajo los términos de la **Licencia de Cambio** (GNU General Public License v2.0 o posterior), y los términos de esta BSL 1.1 dejarán de aplicarse.
+Sujeto a los términos y condiciones de esta Licencia, el Licenciante otorga al Licenciatario un derecho no exclusivo, mundial y libre de regalías para copiar, modificar, crear obras derivadas, redistribuir y hacer uso no productivo del Software con licencia, exclusivamente con fines de evaluación interna, desarrollo, pruebas, investigación académica o propósitos educativos.
 
 ---
 
-## 2. Exclusiones y Aclaraciones
+## 2. Limitación de Uso
 
-- Esta licencia **no otorga** ningún derecho sobre marcas comerciales, nombres comerciales, logotipos o identidad visual asociada al proyecto Libertad VZLA.
-- Los datos almacenados por la plataforma (artículos, reportes, registros del Registro de Memoria Cívica) **no están cubiertos** por esta licencia de software. La gestión, distribución y protección de dichos datos se rige por la [Política de Seguridad](SECURITY.md) del proyecto.
-- Las contribuciones de terceros al proyecto quedan sujetas a los términos de esta misma licencia, según lo establecido en [CONTRIBUCIÓN.md](CONTRIBUTING.md).
+### 2.1. Prohibición de Uso de Producción
+
+El Licenciatario **no podrá** utilizar el Software con licencia para un **Uso de Producción** sin el consentimiento previo, expreso y por escrito del Licenciante.
+
+**Uso de Producción** se define como cualquier uso del Software que no sea de evaluación interna, desarrollo, pruebas o propósitos educativos. Esto incluye, sin limitación:
+
+- Ofrecer el Software o cualquier funcionalidad derivada del mismo como un servicio a terceros (SaaS).
+- Integrar el Software en productos comerciales destinados a usuarios finales.
+- Utilizar el Software o sus componentes en entornos de producción orientados al público.
+- Desplegar el Software para recopilar, procesar o distribuir información noticiosa o de otro tipo de forma pública.
+- Reproducir la lógica de verificación, los flujos editoriales o el modelo de procesamiento de lenguaje del Software en sistemas competidores o derivados.
+
+### 2.2. Uso No Autorizado
+
+Cualquier Uso de Producción sin consentimiento escrito del Licenciante constituye una **infracción de los derechos de propiedad intelectual** del Licenciante y faculta a este a ejercer todos los recursos legales disponibles, incluyendo pero no limitándose a:
+
+- Demandas por violación de derechos de autor conforme al Convenio de Berna (1886, revisado), la Ley sobre el Derecho de Autor de Venezuela (Gaceta Oficial Nº 4.638 Extraordinario, 1993) y la legislación aplicable en la jurisdicción del infractor.
+- Solicitud de medidas cautelares para la cesación inmediata del uso no autorizado.
+- Reclamación de daños y perjuicios, lucro cesante, costos de remediación y honorarios legales.
 
 ---
 
-## 3. Descargo de Responsabilidad
+## 3. Fecha de Cambio
 
-EL SOFTWARE SE PROPORCIONA "TAL CUAL", SIN GARANTÍA DE NINGÚN TIPO, EXPRESA O IMPLÍCITA, INCLUYENDO PERO NO LIMITÁNDOSE A LAS GARANTÍAS DE COMERCIALIZACIÓN, IDONEIDAD PARA UN PROPÓSITO PARTICULAR Y NO INFRACCIÓN. EN NINGÚN CASO LOS AUTORES O TITULARES DE DERECHOS SERÁN RESPONSABLES DE NINGUNA RECLAMACIÓN, DAÑO U OTRA RESPONSABILIDAD, YA SEA EN UNA ACCIÓN CONTRACTUAL, EXTRACONTRACTUAL O DE OTRO TIPO, QUE SURJA DE, EN CONEXIÓN CON EL SOFTWARE O EL USO U OTRAS OPERACIONES CON EL SOFTWARE.
+A partir de la **Fecha de Cambio** (1 de marzo de 2030), el Software con licencia estará disponible bajo los términos de la **Licencia de Cambio** (GNU General Public License v2.0 o posterior), y los términos restrictivos de esta BSL 1.1 dejarán de aplicarse.
+
+Este mecanismo — conocido como *springing license* — garantiza que el Software eventualmente será accesible bajo una licencia de software libre reconocida, manteniendo un periodo inicial de protección comercial.
 
 ---
 
-## 4. Referencia al Texto Original
+## 4. Exclusiones
 
-Esta licencia es una adaptación en español para fines de comprensión. El texto legal vinculante de la Business Source License 1.1 se encuentra disponible en:
+### 4.1. Marcas y Propiedad Industrial
+
+Esta licencia **no otorga** ningún derecho, expreso o implícito, sobre:
+- Marcas comerciales, nombres comerciales, logotipos, identidad visual o materiales de marketing asociados al proyecto Libertad VZLA.
+- El uso del nombre "Libertad VZLA" en productos, servicios o comunicaciones de terceros, sin autorización escrita.
+
+### 4.2. Datos de la Plataforma
+
+Los datos almacenados, procesados o distribuidos por la plataforma — incluyendo artículos, reportes ciudadanos, registros del Registro de Memoria Cívica, perfiles de usuario y registros de auditoría — **no están cubiertos por esta licencia de software.** El tratamiento, distribución y protección de dichos datos se rige por la [Política de Seguridad](SECURITY.md) del proyecto, la legislación venezolana aplicable (Art. 28, 48 y 60 de la Constitución) y los estándares internacionales de protección de datos personales (RGPD, ISO/IEC 27701).
+
+### 4.3. Modelo de Procesamiento de Lenguaje
+
+El modelo de procesamiento de lenguaje propietario desarrollado por Libertad VZLA — incluyendo sus pesos, arquitectura, datos de entrenamiento y parámetros de configuración — constituye un **secreto comercial** del Licenciante y está excluido de los derechos otorgados bajo esta licencia. Cualquier intento de extraer, replicar o redistribuir el modelo será tratado como una violación de propiedad intelectual.
+
+---
+
+## 5. Contribuciones de Terceros
+
+Al contribuir con el proyecto (según los términos establecidos en [CONTRIBUCIÓN.md](CONTRIBUTING.md)), el contribuyente:
+
+- Cede la propiedad intelectual de sus contribuciones al Licenciante.
+- Acepta que dichas contribuciones quedan sujetas a los términos de esta misma licencia.
+- Garantiza que sus contribuciones son originales y no infringen derechos de terceros.
+
+---
+
+## 6. Descargo de Responsabilidad
+
+EL SOFTWARE SE PROPORCIONA "TAL CUAL" (*AS IS*), SIN GARANTÍA DE NINGÚN TIPO, EXPRESA O IMPLÍCITA, INCLUYENDO PERO NO LIMITÁNDOSE A LAS GARANTÍAS DE COMERCIALIZACIÓN, IDONEIDAD PARA UN PROPÓSITO PARTICULAR Y NO INFRACCIÓN.
+
+EN NINGÚN CASO EL LICENCIANTE SERÁ RESPONSABLE DE NINGUNA RECLAMACIÓN, DAÑO U OTRA RESPONSABILIDAD, YA SEA EN UNA ACCIÓN CONTRACTUAL, EXTRACONTRACTUAL O DE OTRO TIPO, QUE SURJA DE, EN CONEXIÓN CON EL SOFTWARE O EL USO U OTRAS OPERACIONES CON EL SOFTWARE.
+
+ESTA EXCLUSIÓN DE RESPONSABILIDAD NO APLICA A LOS DATOS DE FUENTES, TESTIGOS O USUARIOS DE LA PLATAFORMA, CUYA PROTECCIÓN SE RIGE POR LA POLÍTICA DE SEGURIDAD Y LA LEGISLACIÓN APLICABLE.
+
+---
+
+## 7. Referencia al Texto Original
+
+Esta licencia es una adaptación en español con cláusulas adicionales de protección. El texto base de la Business Source License 1.1 se encuentra disponible en:
 
 🔗 [mariadb.com/bsl11](https://mariadb.com/bsl11/)
 
-En caso de discrepancia entre esta adaptación y el texto original en inglés, prevalecerá el texto original.
+En caso de discrepancia entre las cláusulas generales de este documento y el texto base en inglés de la BSL 1.1, prevalecerá el texto original. Las cláusulas adicionales de protección (Secciones 2.2, 4 y 5) son específicas de Libertad VZLA y prevalecen sobre cualquier interpretación genérica de la licencia base.
+
+---
+
+## 8. Legislación Aplicable y Jurisdicción
+
+Esta licencia se interpreta conforme a:
+
+- **Venezuela:** Ley sobre el Derecho de Autor (Gaceta Oficial Nº 4.638 Extraordinario, 1993), Ley Especial contra los Delitos Informáticos (Gaceta Oficial Nº 37.313, 2001), Constitución de la República Bolivariana de Venezuela (1999).
+- **Internacional:** Convenio de Berna para la Protección de las Obras Literarias y Artísticas (1886, revisado), Acuerdo sobre los ADPIC (OMC, 1994), legislación de propiedad intelectual y derechos de autor aplicable en la jurisdicción del infractor.
+
+Cualquier controversia derivada de esta licencia se someterá a los tribunales competentes de la jurisdicción del Licenciante, sin perjuicio de las acciones que pueda ejercer el Licenciante en cualquier otra jurisdicción donde se haya producido la infracción.
 
 ---
 
