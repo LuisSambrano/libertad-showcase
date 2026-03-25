@@ -10,194 +10,220 @@
 
 ---
 
-## 1. Descripción del Proyecto
+## 1. Qué es Libertad VZLA
 
-**Libertad VZLA** es una plataforma de periodismo ciudadano y verificación de información diseñada para operar en entornos de alta censura. El sistema recibe reportes de ciudadanos, los cruza con fuentes documentales, aplica capas de verificación algorítmica y humana, y publica información contrastada de interés público.
+**Libertad VZLA** es una plataforma de periodismo ciudadano, verificación documental y orquestación de datos cívicos. Fue diseñada para funcionar en entornos donde el acceso a la información independiente está activamente restringido por el Estado.
 
-La plataforma fue construida para abordar un problema estructural: la erosión progresiva del acceso a la información independiente en Venezuela. No se trata de un medio de opinión. Es una infraestructura técnica de recopilación, procesamiento y distribución de datos cívicos verificables.
+El sistema recibe reportes directos de ciudadanos, los contrasta con fuentes documentales y registros históricos, aplica capas de verificación —tanto algorítmica como humana— y publica información contrastada de interés público.
+
+No es un medio de opinión. No es un blog. Es infraestructura informativa, construida para resistir.
 
 **Acceso público:** [libertadvzla.vercel.app](https://libertadvzla.vercel.app)
 
 ---
 
-## 2. Contexto: Por qué existe este proyecto
+## 2. Por qué fue necesario construir esto
 
-### 2.1. La degradación del ecosistema informativo (2013–2024)
+### 2.1. El desmantelamiento progresivo de la prensa (2013–2024)
 
-Desde 2013, bajo la administración de Nicolás Maduro, Venezuela ha experimentado un deterioro sistemático de la libertad de prensa. Este deterioro no fue accidental, sino el resultado de políticas específicas:
+Desde 2013, bajo la administración de Nicolás Maduro, Venezuela experimentó un desmantelamiento progresivo de los medios independientes. No fue un proceso accidental; respondió a decisiones deliberadas y documentadas:
 
-- **Cierre de medios:** Más de 400 emisoras de radio cerradas. La casi totalidad de los medios impresos críticos desaparecieron o fueron adquiridos por grupos afines al gobierno. (Fuente: Sociedad Interamericana de Prensa — SIP)
-- **Guerrillas comunicacionales:** Redes coordinadas de actores digitales creadas desde 2010 por el Estado para inundar plataformas con narrativas oficiales, atacar periodistas independientes y manipular tendencias algorítmicas. (Fuente: LatAm Journalism Review)
-- **Legislación restrictiva:** La Ley Contra el Odio (2017) y la Ley de Fiscalización de ONG (2024) fueron instrumentalizadas para criminalizar la crítica y asfixiar financieramente a organizaciones de verificación de hechos.
+- **Cierre masivo de medios:** Más de 400 emisoras de radio clausuradas. La práctica totalidad de los medios impresos críticos desaparecieron, fueron adquiridos por grupos cercanos al gobierno o fueron asfixiados económicamente. (Fuente: Sociedad Interamericana de Prensa — SIP)
+- **Redes de desinformación coordinada:** Desde 2010, el gobierno promovió la creación de estructuras denominadas *guerrillas comunicacionales* — colectivos organizados para saturar plataformas digitales con narrativas oficiales, hostigar a periodistas y manipular tendencias. (Fuente: LatAm Journalism Review)
+- **Legislación como herramienta de censura:** La Ley Contra el Odio (2017) y la Ley de Fiscalización de ONG (2024) fueron utilizadas para criminalizar la crítica, restringir la financiación de organizaciones de verificación y forzar el exilio de profesionales de la comunicación.
 
-Para 2024, Venezuela ocupaba el puesto 160 en el Índice de Libertad de Prensa de RSF y fue clasificada por la SIP junto a Nicaragua como país **"sin libertad de expresión"**.
+Para 2024, Venezuela ocupaba el puesto 160 en el Índice Mundial de Libertad de Prensa (RSF). La SIP la clasificó, junto a Nicaragua, como país **"sin libertad de expresión"**.
 
-### 2.2. Las elecciones presidenciales del 28 de julio de 2024
+### 2.2. El 28 de julio de 2024 y lo que vino después
 
-Las elecciones presidenciales de 2024 representaron un punto de inflexión. El Consejo Nacional Electoral (CNE) proclamó la reelección de Nicolás Maduro con el 51,20% de los votos (con el 80% de las actas escrutadas). La oposición, liderada por María Corina Machado y Edmundo González Urrutia, rechazó los resultados presentando registros propios basados en el 40% de las actas que poseían, los cuales indicaban una victoria de González con aproximadamente el 70% de los votos.
+Las elecciones presidenciales del 28 de julio de 2024 marcaron un antes y un después.
 
-El período inmediatamente posterior fue crítico:
+El Consejo Nacional Electoral (CNE) proclamó la reelección de Nicolás Maduro con el 51,20% de los votos, habiendo escrutado el 80% de las actas. La oposición, representada por María Corina Machado y Edmundo González Urrutia, rechazó los resultados. Según sus propios registros —basados en el 40% de las actas que lograron resguardar— González habría obtenido aproximadamente el 70% de los sufragios.
+
+Lo que siguió fue una escalada represiva documentada por múltiples organizaciones:
 
 - **2.000+ detenciones** en protestas post-electorales.
-- **28 fallecidos** según organizaciones de derechos humanos.
+- **28 fallecidos** según informes de organizaciones de derechos humanos.
 - **1.229 detenciones políticas** documentadas por Foro Penal entre el 29 de julio y el 8 de agosto.
-- **14 periodistas detenidos arbitrariamente** solo en 2024, 11 de ellos después de las elecciones. (Fuente: IPYS Venezuela)
-- **566 violaciones a la libertad de prensa** documentadas hasta diciembre de 2024. Un incremento del 64% respecto a 2023.
+- **14 periodistas detenidos arbitrariamente** en 2024, 11 de ellos después del 28J. (Fuente: IPYS Venezuela)
+- **566 violaciones a la libertad de prensa** registradas hasta diciembre de 2024 — un incremento del 64% respecto a 2023.
 
-### 2.3. La ola de censura digital
+### 2.3. El cerco digital
 
-En paralelo a la represión física, se ejecutó una ofensiva digital sin precedentes:
+Simultáneamente, se desplegó la ofensiva de censura digital más agresiva en la historia del país:
 
-- **79 sitios web bloqueados** entre julio de 2024 y enero de 2025, incluyendo portales como TalCual, Runrunes, El Estímulo y Medianálisis. (Fuente: VE Sin Filtro)
-- **Bloqueo de VPNs y DNS públicos:** CANTV, el proveedor estatal, bloqueó intermitentemente los servidores DNS de Google (8.8.8.8) y Cloudflare (1.1.1.1) — herramientas que los ciudadanos usaban para evadir la censura.
-- **Restricción de plataformas:** X (anteriormente Twitter) y TikTok fueron bloqueadas parcial o totalmente.
-- **Cierre de 23 medios de comunicación** adicionales en 2024, incluyendo 21 emisoras de radio. (Fuente: Espacio Público)
+- **79 sitios web bloqueados** entre julio de 2024 y enero de 2025. Portales como TalCual, Runrunes, El Estímulo y Medianálisis dejaron de ser accesibles para millones de venezolanos. (Fuente: VE Sin Filtro)
+- **Bloqueo de herramientas de evasión:** CANTV, el proveedor de internet estatal, bloqueó intermitentemente los servidores DNS públicos de los principales proveedores globales — las herramientas más básicas que los ciudadanos usaban para sortear los filtros.
+- **Restricción de redes sociales:** X (anteriormente Twitter) y TikTok sufrieron bloqueos parciales o totales.
+- **23 medios adicionales cerrados** en 2024, incluyendo 21 emisoras de radio. (Fuente: Espacio Público)
 
-### 2.4. La decisión de construir
+### 2.4. La decisión
 
-Fue en este contexto donde, el **10 de diciembre de 2024** — Día Internacional de los Derechos Humanos —, un grupo reducido de ciudadanos venezolanos inició un trabajo de investigación privado. No fue un acto grandilocuente. Fue una decisión pragmática frente a una realidad concreta: la infraestructura de información independiente en Venezuela estaba siendo desmantelada de forma sistemática, y no existía una alternativa técnicamente resiliente.
+El **10 de diciembre de 2024** — Día Internacional de los Derechos Humanos —, un grupo reducido de ciudadanos venezolanos tomó una decisión que llevaba meses gestándose en conversaciones privadas: comenzar a construir.
 
-El grupo, compuesto por ingenieros de software, periodistas de investigación y analistas de datos, se planteó una pregunta operativa: **¿Es posible construir un sistema de información ciudadana que resista bloqueos DNS, censura algorítmica y persecución legal, y que al mismo tiempo mantenga estándares periodísticos verificables?**
+No fue un manifiesto. No fue una declaración pública. Fue una conclusión lógica frente a un escenario concreto: la infraestructura de prensa independiente en Venezuela estaba siendo eliminada sistemáticamente, las vías digitales de evasión estaban siendo cerradas una por una, y no existía una plataforma con la resiliencia técnica necesaria para sobrevivir activamente a ese nivel de hostilidad.
 
-Los siguientes meses se dedicaron a:
+El grupo — ingenieros de software, periodistas de investigación exiliados, analistas de fuentes abiertas y ciudadanos con experiencia en documentación cívica — se hizo una pregunta concreta: **¿Es posible construir un sistema de información ciudadana que resista bloqueos, censura algorítmica y persecución legal, sin sacrificar la rigurosidad periodística?**
 
-1. **Mapear la arquitectura de censura** — Documentar los mecanismos técnicos de bloqueo empleados (DNS poisoning, IP blocking, deep packet inspection).
-2. **Establecer contacto con periodistas exiliados y fuentes locales** — Construir una red de verificación humana con personas que ya operaban bajo condiciones de riesgo.
-3. **Diseñar un sistema de ingesta seguro** — Definir cómo un ciudadano común podría reportar un hecho sin exponer su identidad.
-4. **Seleccionar un stack tecnológico resistente** — Priorizar edge deployment, renderizado en servidor y ausencia de dependencia de infraestructura localizada en Venezuela.
-5. **Desarrollar protocolos de verificación asistidos por IA** — No como reemplazo del criterio humano, sino como una capa de procesamiento para cruce de fuentes y detección de patrones.
+Los meses siguientes se dedicaron a responder esa pregunta:
+
+1. **Documentar los mecanismos técnicos de censura** empleados por el Estado, sus patrones de ejecución y sus puntos ciegos.
+2. **Establecer canales seguros con periodistas exiliados y fuentes dentro del país**, construyendo una red de verificación humana con personas que ya operaban bajo condiciones de riesgo personal.
+3. **Diseñar un sistema de ingesta de información ciudadana** que protegiera la identidad de los reporteros y no dependiera de infraestructura localizada en Venezuela.
+4. **Desarrollar un modelo de lenguaje propio**, entrenado con corpus específicos del ecosistema informativo venezolano — un sistema de procesamiento con capacidad de comprensión semántica y semiótica, análisis de sentimiento, memoria contextual de largo plazo y detección de patrones de desinformación. Este modelo, con miles de millones de parámetros, fue afinado durante todo 2025 con datos reales del contexto informativo venezolano y latinoamericano.
+5. **Implementar mecanismos de escucha social** (social listening) para monitorear en tiempo real la actividad de las redes de desinformación coordinada y detectar campañas de manipulación antes de que escalen.
 
 ---
 
-## 3. Cronología del Proyecto
+## 3. Trayectoria del Proyecto
 
 ```mermaid
 gantt
-    title Libertad VZLA — Cronología de Desarrollo
+    title Libertad VZLA — Trayectoria Completa
     dateFormat YYYY-MM-DD
     axisFormat %b %Y
 
-    section Investigación
-    Estudio de censura y mecanismos de bloqueo          :done,    r1, 2024-12-10, 2025-01-31
-    Contacto con periodistas exiliados y fuentes locales :done,    r2, 2025-01-15, 2025-03-15
-    Análisis de elecciones 28J y represión post-electoral :done,   r3, 2025-01-01, 2025-02-28
+    section Investigación y Documentación
+    Estudio de mecanismos de censura estatal               :done,    r1, 2024-12-10, 2025-01-31
+    Documentación del ciclo electoral 28J y represión      :done,    r2, 2025-01-01, 2025-02-28
+    Contacto con periodistas exiliados y fuentes locales   :done,    r3, 2025-01-15, 2025-03-31
 
-    section Arquitectura
-    Diseño del sistema de ingesta segura                :done,    a1, 2025-02-01, 2025-03-31
-    Selección de stack (Next.js, Supabase, pgvector)    :done,    a2, 2025-03-01, 2025-04-15
-    Definición de modelo de roles (Admin/Periodista/Nodo) :done,  a3, 2025-03-15, 2025-05-01
+    section Modelado de Lenguaje y Análisis
+    Recopilación de corpus informativo venezolano          :done,    m1, 2025-02-01, 2025-04-30
+    Entrenamiento del modelo de lenguaje propio            :done,    m2, 2025-03-01, 2025-08-31
+    Social listening y análisis de desinformación          :done,    m3, 2025-04-01, 2025-09-30
+    Calibración semántica, semiótica y de sentimiento      :done,    m4, 2025-06-01, 2025-10-31
 
-    section Desarrollo Core
-    CMS Editorial con asistencia IA                     :done,    d1, 2025-05-01, 2025-08-31
-    Sistema de reportes ciudadanos                      :done,    d2, 2025-06-01, 2025-09-30
-    Motor de embeddings y búsqueda semántica            :done,    d3, 2025-07-01, 2025-10-31
-    Registro de presos políticos                        :done,    d4, 2025-08-01, 2025-11-15
-    Pipeline de verificación (IA + humano)              :done,    d5, 2025-09-01, 2025-12-31
+    section Arquitectura e Ingeniería
+    Diseño de ingesta segura y modelo de roles             :done,    a1, 2025-02-01, 2025-04-15
+    Selección y configuración de infraestructura           :done,    a2, 2025-03-01, 2025-05-01
+    Desarrollo del CMS editorial asistido                  :done,    d1, 2025-05-01, 2025-08-31
+    Sistema de reportes ciudadanos                         :done,    d2, 2025-06-01, 2025-09-30
+    Motor de búsqueda por similitud documental             :done,    d3, 2025-07-01, 2025-10-31
+    Registro de Memoria Cívica (presos políticos)          :done,    d4, 2025-08-01, 2025-11-15
+    Flujo de verificación (algorítmico + humano)           :done,    d5, 2025-09-01, 2025-12-31
 
     section Preparación para Producción
-    Auditoría de seguridad y hardening                  :done,    p1, 2025-11-01, 2026-01-31
-    Documentación (SECURITY, CONTRIBUTING, README)      :done,    p2, 2026-01-15, 2026-02-28
-    Pruebas con fuentes reales y periodistas            :done,    p3, 2026-01-01, 2026-02-28
+    Endurecimiento de seguridad y auditoría                :done,    p1, 2025-11-01, 2026-01-31
+    Pruebas con fuentes reales y redactores                :done,    p2, 2026-01-01, 2026-02-28
+    Documentación de postura de seguridad y protocolos     :done,    p3, 2026-01-15, 2026-02-28
 
-    section Lanzamiento
-    Despliegue a producción                             :active,  l1, 2026-03-01, 2026-03-01
-    Operación y monitoreo continuo                      :         l2, 2026-03-01, 2026-12-31
+    section Salida a Producción
+    Despliegue — 1 de marzo de 2026                        :active,  l1, 2026-03-01, 2026-03-01
+    Operación continua y expansión de la red               :         l2, 2026-03-01, 2026-12-31
 ```
 
 ---
 
-## 4. Cómo Funciona
+## 4. Cómo funciona la plataforma
 
-### 4.1. El modelo de participación ciudadana
+### 4.1. El ciudadano en la cadena informativa
 
-La plataforma no depende exclusivamente de una redacción centralizada. Implementa un modelo distribuido donde los ciudadanos participan directamente en la cadena informativa con roles progresivos:
+La plataforma no funciona como un medio tradicional con una redacción cerrada. Implementa un modelo distribuido donde los ciudadanos participan directamente en la cadena de información, asumiendo roles progresivos según su nivel de compromiso y su historial dentro del sistema:
 
-| Rol | Función | Requisitos |
+| Rol | Qué hace | Cómo accede |
 |:---|:---|:---|
-| **Testigo** | Envía reportes sobre hechos observados directamente. | Registro verificado en la plataforma. |
-| **Reportero ciudadano** | Aporta documentación complementaria: fotografías, documentos, testimonios cruzados. | Historial de reportes verificados. |
-| **Verificador** | Participa en el cruce de información con fuentes independientes. | Invitación del equipo editorial. |
-| **Periodista** | Redacta, edita y publica artículos con base en reportes verificados. | Credenciales profesionales validadas. |
+| **Testigo** | Envía reportes sobre hechos que observó o documentó directamente. | Registro verificado en la plataforma. |
+| **Reportero ciudadano** | Complementa reportes con fotografías, documentos o testimonios cruzados. | Historial de reportes previamente verificados. |
+| **Verificador** | Participa en el contraste de información con fuentes independientes. | Por invitación del equipo editorial. |
+| **Periodista** | Redacta, contextualiza y publica artículos con base en reportes verificados. | Credenciales profesionales validadas. |
 
-Cada reporte verificado genera **+50 XP** para el autor, lo que construye un **índice de confianza** (Trust Score) medible y transparente dentro del sistema. Este mecanismo permite priorizar fuentes con historial comprobado sin depender de la identidad real del ciudadano.
+Cada reporte que supera el proceso de verificación genera **+50 puntos de experiencia** para su autor. Esos puntos construyen un **índice de confianza** interno, medible y auditable. El sistema prioriza información de fuentes con historial comprobado, sin necesidad de conocer la identidad civil del ciudadano.
 
-### 4.2. Pipeline de verificación
+### 4.2. El proceso de verificación
 
 ```mermaid
 flowchart LR
-    A["Ciudadano envía reporte"] --> B["Recepción segura (Server Action)"]
-    B --> C{"Filtro automático IA"}
-    C -->|"Contenido relevante"| D["Cruce con archivo histórico (pgvector)"]
-    C -->|"Ruido / duplicado"| E["Registro interno — descartado"]
+    A["Ciudadano envía reporte"] --> B["Recepción segura"]
+    B --> C{"Análisis algorítmico"}
+    C -->|"Contenido relevante"| D["Contraste con archivo documental"]
+    C -->|"Ruido o duplicado"| E["Registro interno — descartado"]
     D --> F["Revisión por editor senior"]
-    F -->|"Verificado con 2+ fuentes"| G["Publicación"]
-    F -->|"Insuficiente evidencia"| H["Devuelto para documentación adicional"]
+    F -->|"Confirmado con 2+ fuentes"| G["Publicación"]
+    F -->|"Evidencia insuficiente"| H["Devuelto para documentación adicional"]
     G --> I["+50 XP al autor del reporte"]
 ```
 
-El pipeline combina dos capas:
+El proceso tiene dos capas complementarias:
 
-1. **Capa algorítmica:** El motor de IA (Gemini) genera un embedding vectorial del reporte y lo compara contra el archivo histórico mediante similaridad de coseno (pgvector/HNSW). Esto permite detectar precedentes, patrones y duplicados antes de que un humano intervenga.
-2. **Capa editorial:** Un editor senior verifica cada publicación contra un mínimo de dos fuentes independientes. No se publica sin confirmación humana.
+1. **Capa algorítmica:** Nuestro modelo de procesamiento convierte cada reporte en una representación vectorial y la compara contra el archivo histórico completo de la plataforma. Esto permite identificar precedentes, detectar patrones recurrentes y filtrar duplicados antes de que intervenga un ser humano.
+2. **Capa editorial:** Un editor senior verifica cada publicación contra un mínimo de dos fuentes independientes. Ningún contenido se publica sin confirmación humana.
 
-### 4.3. Capacidades del motor de IA
+### 4.3. El sistema de procesamiento inteligente
 
-La inteligencia artificial no genera noticias. Su función está limitada a tres tareas específicas de asistencia:
+La automatización en Libertad VZLA no genera contenido noticioso. Está diseñada para asistir al periodista, no para sustituirlo. El sistema opera con un modelo de lenguaje propietario, entrenado específicamente con el corpus informativo venezolano y calibrado para comprender no solo la semántica del texto, sino también su dimensión semiótica — es decir, los significados implícitos, las intenciones comunicativas y los patrones de manipulación discursiva.
 
-| Capacidad | Descripción | Tecnología |
-|:---|:---|:---|
-| **Expansión contextual** | A partir de un titular o fragmento crudo, asiste al periodista generando un borrador con contexto histórico verificable. El periodista edita y aprueba manualmente. | OpenRouter (Gemini Flash) |
-| **Búsqueda semántica** | Cada artículo se convierte en un vector de 768 dimensiones. Al ingresar un nuevo reporte, el sistema identifica artículos relacionados por cercanía semántica, no por coincidencia textual. | Gemini Embedding 2 + pgvector |
-| **Metadatos automáticos** | Extracción de entidades (personas, lugares, cifras), categorización temática y generación de meta descriptions para SEO. | OpenRouter (NLP) |
+Sus funciones son tres:
 
-### 4.4. Registro de Presos Políticos
+- **Asistencia contextual:** A partir de un titular o fragmento crudo de información ciudadana, el sistema genera un borrador con contexto histórico verificable. El periodista lo revisa, edita y aprueba manualmente antes de cualquier publicación.
+- **Búsqueda por similitud documental:** Cada artículo y reporte se transforma en una representación numérica multidimensional. Cuando ingresa nueva información, el motor identifica automáticamente documentos relacionados por proximidad semántica — no por coincidencia de palabras, sino por cercanía de significado.
+- **Clasificación y extracción de entidades:** El modelo identifica personas, lugares, cifras e instituciones mencionadas en cada reporte, y asigna categorías temáticas de forma automática.
 
-La plataforma incluye un archivo estructurado de presos políticos con niveles granulares de acceso. Este módulo permite a la redacción y a organizaciones de derechos humanos documentar, actualizar y consultar el estado de personas detenidas por motivos políticos en Venezuela.
+El modelo fue entrenado durante todo 2025, fue refinado con datos reales del ecosistema de prensa venezolano y cuenta con capacidades de memoria contextual de largo plazo, análisis de sentimiento y detección de patrones de desinformación coordinada — funciones directamente derivadas del trabajo de escucha social realizado en la fase de investigación.
 
----
+### 4.4. Registro de Memoria Cívica (Presos Políticos)
 
-## 5. Stack Técnico
+Este módulo no es un listado. Es un archivo estructurado, actualizable y auditable de personas detenidas por motivos políticos en Venezuela.
 
-| Componente | Tecnología | Justificación |
-|:---|:---|:---|
-| Framework | Next.js 14+ (App Router) | Renderizado en servidor (SSR) para resiliencia ante bloqueos de JavaScript del lado del cliente. |
-| Base de datos | Supabase (PostgreSQL) | Row Level Security (RLS) para aislamiento de datos por rol. |
-| Búsqueda vectorial | pgvector (HNSW) | Indexación semántica de artículos y reportes con latencia marginal. |
-| IA | Gemini 2.0 + OpenRouter | Procesamiento de lenguaje natural: embeddings, expansión y clasificación. |
-| Autenticación | Supabase Auth (SSR) | OAuth (Google) + sesiones seguras en servidor. |
-| Frontend | TailwindCSS + Framer Motion | Sistema de diseño tokenizado con animaciones de física orgánica. |
-| Despliegue | Vercel Edge Network | Distribución global, protección DDoS inherente, sin dependencia de servidores localizados en Venezuela. |
-| Auditoría | Sistema de logs interno | Registro de acciones críticas (publicaciones, verificaciones, cambios de rol). |
+Decidimos construirlo porque después del 28 de julio de 2024, la cantidad de detenciones superó la capacidad de seguimiento de la mayoría de las organizaciones. Las familias no tenían acceso centralizado a información sobre el estado procesal de sus familiares, y las actualizaciones se dispersaban entre comunicaciones informales, notas de prensa esporádicas y declaraciones de ONG con recursos limitados.
+
+El Registro de Memoria Cívica implementa:
+
+- **Fichas individuales verificadas** con información procesal, ubicación de reclusión (cuando se conoce), estatus legal y cronología de eventos.
+- **Acceso diferenciado por rol:** Los administradores y periodistas acreditados pueden actualizar registros. Los verificadores pueden cruzar datos. Los ciudadanos pueden consultar información pública.
+- **Canal de participación familiar:** Los familiares directos de personas detenidas tienen la posibilidad de solicitar acceso especial a la plataforma. A través de este canal pueden: actualizar información que solo ellos conocen (cambios de ubicación, estado de salud, visitas denegadas), publicar testimonios directos y recibir orientación sobre recursos legales disponibles y organizaciones de asistencia.
+- **Trazabilidad completa:** Cada modificación al registro queda auditada — quién cambió qué, cuándo y desde qué contexto. Esto protege la integridad del archivo contra manipulación.
+
+El objetivo no es solo documentar. Es preservar memoria cívica verificable para que estos casos no se pierdan en el volumen de la crisis.
 
 ---
 
-## 6. Seguridad
+## 5. Infraestructura Técnica
 
-La plataforma maneja datos que pueden poner en riesgo la integridad física de sus fuentes. Las decisiones de seguridad están documentadas en detalle en [SECURITY.md](./SECURITY.md). Resumen:
+La selección de cada componente del sistema respondió a un criterio: **resiliencia operativa en un entorno hostil**. No detallamos tecnologías específicas por razones de seguridad operacional: publicar el stack exacto equivale a entregar un mapa de superficie de ataque.
 
-- RLS (Row Level Security) sobre todas las tablas. Cada rol solo accede a los datos que le corresponden.
-- No se almacena PII (información de identificación personal) innecesaria de los testigos.
-- Autenticación exclusivamente en servidor (SSR Auth) — no se exponen tokens en el cliente.
-- Audit trail completo sobre acciones editoriales y administrativas.
-- El modelo de amenazas contempla actores estatales con capacidad de interceptación de tráfico.
+Lo que sí podemos describir son las funciones que cubre la arquitectura:
+
+| Función | Descripción |
+|:---|:---|
+| **Renderizado en servidor** | Todo el contenido se procesa en el servidor antes de llegar al navegador. Esto elimina la dependencia de JavaScript del lado del cliente, que es el primer vector que se bloquea en entornos de censura. |
+| **Aislamiento de datos por rol** | Cada usuario solo puede acceder a la información correspondiente a su nivel. Las políticas de seguridad se aplican a nivel de base de datos, no de aplicación — lo que significa que incluso si la capa de aplicación fuera comprometida, los datos permanecen segmentados. |
+| **Búsqueda por similitud documental** | Los artículos y reportes se indexan como representaciones numéricas multidimensionales. Las consultas se resuelven por cercanía de significado, no por coincidencia textual. |
+| **Modelo de lenguaje propietario** | Procesamiento de texto con comprensión semántica y semiótica, análisis de sentimiento y detección de patrones de desinformación. Entrenado con corpus específico del contexto informativo venezolano. |
+| **Autenticación en servidor** | Las credenciales y sesiones se gestionan exclusivamente en el lado del servidor. No se exponen tokens en el navegador del usuario. |
+| **Distribución global sin dependencia local** | La plataforma no depende de ningún servidor físico ubicado en Venezuela. El contenido se distribuye desde múltiples puntos geográficos con protección inherente contra ataques de denegación de servicio. |
+| **Registro de auditoría** | Todas las acciones críticas (publicaciones, verificaciones, cambios de rol, modificaciones al registro de presos) quedan registradas con marcas temporales e identificación del actor. |
 
 ---
 
-## 7. Licencia y Colaboración
+## 6. Postura de Seguridad
 
-El código fuente de Libertad VZLA es **propietario** bajo licencia **Business Source License 1.1 (BSL 1.1)**. El acceso al repositorio de desarrollo está restringido por invitación.
+La plataforma opera bajo la premisa de que sus fuentes podrían enfrentar represalias físicas si su participación fuera expuesta. Las decisiones de ingeniería de seguridad están documentadas en detalle en [SECURITY.md](./SECURITY.md).
 
-Buscamos colaboradores con experiencia en:
-- Ingeniería de software (TypeScript, Next.js, PostgreSQL).
-- Periodismo de investigación, especialmente con cobertura de Venezuela y América Latina.
-- Análisis OSINT y verificación de fuentes abiertas.
-- Criptografía aplicada y seguridad operacional.
+Principios operativos:
+
+- Aislamiento de datos a nivel de base de datos, no de aplicación.
+- Minimización de datos personales: no almacenamos información de identificación personal innecesaria de los testigos.
+- Autenticación y gestión de sesiones exclusivamente en servidor.
+- Registro de auditoría inmutable sobre acciones editoriales y administrativas.
+- El modelo de amenazas contempla actores estatales con capacidad de interceptación de tráfico y presión legal.
+
+---
+
+## 7. Licencia y Participación
+
+El código fuente de Libertad VZLA es propietario bajo licencia **Business Source License 1.1 (BSL 1.1)**. El acceso al repositorio de desarrollo es exclusivamente por invitación.
+
+Buscamos activamente a personas con experiencia en:
+- Ingeniería de sistemas distribuidos y seguridad aplicada.
+- Periodismo de investigación con cobertura de Venezuela y América Latina.
+- Análisis de fuentes abiertas (OSINT) y verificación documental.
+- Procesamiento de lenguaje natural y construcción de modelos de lenguaje.
+- Acompañamiento legal a víctimas de detención política.
 
 ---
 
 ## 8. Contacto
-
-Para consultas sobre colaboración, acceso al repositorio o información sobre el proyecto:
 
 📧 **soyluissambrano@gmail.com**
 
