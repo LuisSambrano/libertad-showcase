@@ -1,192 +1,178 @@
-# Security Policy
+# Política de Seguridad — Libertad VZLA
 
-> Libertad VZLA handles sensitive data in a high-risk geopolitical context. This document defines our security posture, threat model, and vulnerability disclosure program.
-
----
-
-## ⚠️ Threat Model
-
-### Adversary Profile
-
-This platform is designed to resist threats from:
-
-| Threat Actor | Capability | Mitigation Strategy |
-|---|---|---|
-| **State-level actors** | Network surveillance, DNS manipulation, legal coercion | Edge deployment, HTTPS enforcement, data minimization, no server-hosted PII logs |
-| **Targeted attackers** | Credential stuffing, phishing, social engineering | MFA enforcement, role-based access, session management |
-| **Supply chain attacks** | Compromised dependencies, typosquatting | Dependabot, lockfile auditing, minimal dependency surface |
-| **Data exfiltration** | Database breaches, API abuse | RLS, input validation, rate limiting, audit logging |
-
-### Attack Surface
-
-- **Public-facing:** Marketing pages, news feed (read-only, no auth required)
-- **Protected:** CMS dashboard, editorial workflows, admin panels (auth + RLS required)
-- **Infrastructure:** Vercel Edge Network, Supabase managed PostgreSQL
+> Libertad VZLA gestiona datos sensibles en un contexto geopolítico de alto riesgo. Este documento define la postura de seguridad del proyecto, el modelo de amenazas, la clasificación de datos, los protocolos de respuesta a incidentes y el programa de divulgación responsable de vulnerabilidades.
 
 ---
 
-## 🔐 Data Classification
+## 1. Premisa Operativa
 
-All data handled by this platform is classified into tiers:
+La plataforma opera bajo una premisa: **las personas que la utilizan como fuentes podrían enfrentar represalias físicas, legales o sociales si su participación fuera expuesta.** Toda decisión de ingeniería, toda política de acceso y todo proceso editorial se evalúa contra esta premisa.
 
-### Tier 1 — Critical (Maximum Protection)
-
-- Source identities and contact information
-- Denunciation/tip content and metadata
-- User authentication credentials
-- API keys and secrets
-
-**Controls:** Encrypted at rest, encrypted in transit, access restricted to minimum viable roles, never logged, never cached client-side.
-
-### Tier 2 — Sensitive (High Protection)
-
-- Registered user profiles (names, emails)
-- Editorial drafts and unpublished content
-- CMS activity logs and audit trails
-- Session tokens and auth state
-
-**Controls:** Encrypted in transit, RLS-enforced access, server-side only processing, automatic expiration.
-
-### Tier 3 — Public (Standard Protection)
-
-- Published articles and media
-- Public-facing marketing content
-- Aggregated, anonymized analytics
-
-**Controls:** Integrity validation, CDN caching, no PII embedded.
+Esta no es una declaración retórica. En Venezuela, entre julio de 2024 y marzo de 2025, se documentaron más de 2.000 detenciones post-electorales, 14 periodistas detenidos arbitrariamente y 566 violaciones a la libertad de prensa (Fuentes: Foro Penal, IPYS Venezuela). La plataforma fue diseñada para operar en ese entorno.
 
 ---
 
-## 🛡️ Security Architecture
+## 2. Marco Normativo de Referencia
 
-### Authentication & Access Control
+Las políticas de seguridad de Libertad VZLA se alinean con los siguientes marcos normativos internacionales:
 
-- **Supabase Auth** with secure session management
-- **Row-Level Security (RLS)** enforced on every table — no exceptions
-- **Role-based access control (RBAC):** `viewer`, `editor`, `admin`, `superadmin`
-- **Server-side auth verification** on all protected routes and Server Actions
-- **No client-side auth decisions** — all authorization logic is server-enforced
-
-### Data Protection
-
-- **Environment variables** for all secrets — zero hardcoded credentials
-- **`.env` files excluded** from version control via `.gitignore`
-- **HTTPS-only** across all endpoints (enforced by Vercel)
-- **Input validation** on all API endpoints and Server Actions
-- **Output sanitization** to prevent XSS and injection attacks
-- **CORS restrictions** on all API routes
-
-### Infrastructure Security
-
-- **Vercel Edge Network** — DDoS protection, automatic TLS, geographic distribution
-- **Supabase managed PostgreSQL** — encrypted at rest, automated backups, network isolation
-- **No self-hosted servers** — reduces attack surface
-- **Automated dependency auditing** via Dependabot (`.github/dependabot.yml`)
-
-### Source Protection
-
-- **Data minimization** — we collect only what is strictly necessary
-- **No IP logging** on submission endpoints
-- **Metadata stripping** on user-submitted content
-- **Journalist-source confidentiality** is an architectural requirement, not a policy choice
+- **Artículo 19, Declaración Universal de Derechos Humanos (DUDH):** Derecho a investigar, recibir y difundir información sin limitación de fronteras.
+- **Artículo 19, Pacto Internacional de Derechos Civiles y Políticos (PIDCP):** Libertad de buscar, recibir y difundir informaciones e ideas de toda índole.
+- **Observación General Nº 34, Comité de DDHH de la ONU:** Confirma que la protección de fuentes periodísticas es componente fundamental de la libertad de expresión.
+- **Directiva (UE) 2019/1937:** Protección de denunciantes — establece que los canales de denuncia deben garantizar confidencialidad y que los denunciantes son fuentes esenciales del periodismo de investigación.
+- **Principios de Tshwane (2013):** Seguridad nacional y derecho a la información — los denunciantes que revelan información de interés público no deben enfrentar represalias.
+- **Reglamento General de Protección de Datos (RGPD / GDPR):** Principios de minimización de datos, limitación de acceso y confidencialidad en el tratamiento de información personal.
 
 ---
 
-## 🚨 Incident Response
+## 3. Modelo de Amenazas
 
-### Response Protocol
+### 3.1. Actores contemplados
 
-| Phase | Action | SLA |
-|---|---|---|
-| **Detection** | Automated monitoring, anomaly detection, user reports | Continuous |
-| **Triage** | Severity classification (Critical/High/Medium/Low) | < 1 hour |
-| **Containment** | Isolate affected systems, revoke compromised credentials | < 4 hours |
-| **Eradication** | Root cause analysis, patch deployment | < 24 hours |
-| **Recovery** | Service restoration, data integrity verification | < 48 hours |
-| **Post-mortem** | Documented analysis, prevention measures | < 7 days |
+| Actor | Capacidad estimada | Contramedidas aplicadas |
+|:---|:---|:---|
+| **Actores estatales** | Vigilancia de red, manipulación DNS, presión legal, interceptación de tráfico, detención de periodistas | Distribución global sin infraestructura local, comunicaciones cifradas, minimización de datos, ausencia de registros IP innecesarios |
+| **Atacantes dirigidos** | Robo de credenciales, phishing, ingeniería social | Autenticación fuerte, control de acceso por rol, gestión de sesiones en servidor |
+| **Ataques a la cadena de suministro** | Dependencias comprometidas, bibliotecas falsificadas | Auditoría automática de dependencias, bloqueo de versiones, superficie mínima de dependencias |
+| **Exfiltración de datos** | Acceso no autorizado a base de datos, abuso de API | Aislamiento de datos por rol a nivel de base de datos, validación de entrada, limitación de velocidad, registro de auditoría |
 
-### Severity Classification
+### 3.2. Superficie de exposición
 
-- **Critical:** Data breach, authentication bypass, production downtime
-- **High:** Privilege escalation, sensitive data exposure, XSS on authenticated pages
-- **Medium:** Information disclosure (non-PII), CSRF, open redirects
-- **Low:** Best practice violations, minor information leaks
+- **Acceso público (sin autenticación):** Páginas informativas y feed de noticias (solo lectura).
+- **Acceso protegido (autenticación + rol requerido):** Panel editorial, flujos de verificación, administración, Registro de Memoria Cívica.
 
 ---
 
-## 📢 Vulnerability Disclosure
+## 4. Clasificación de Datos
 
-### Reporting a Vulnerability
+### Nivel 1 — Crítico (Protección Máxima)
 
-If you discover a security vulnerability:
+- Identidades y datos de contacto de fuentes y testigos.
+- Contenido y metadatos de denuncias.
+- Credenciales de autenticación de usuarios.
+- Claves y secretos de infraestructura.
 
-1. **DO NOT** create a public GitHub Issue
-2. **DO NOT** disclose the vulnerability publicly before it is patched
-3. **Email:** [security@luissambrano.dev](mailto:security@luissambrano.dev)
-4. **Alternative:** Open a [private security advisory](https://github.com/LuisSambrano/libertad/security/advisories/new)
+**Controles:** Cifrado en reposo y en tránsito. Acceso restringido al mínimo de roles necesarios. Nunca se registran en logs. Nunca se almacenan en caché del lado del cliente.
 
-### What to Include
+### Nivel 2 — Sensible (Protección Alta)
 
-- Steps to reproduce the vulnerability
-- Impact assessment (what data/systems are affected)
-- Suggested fix (if applicable)
-- Your contact information for follow-up
+- Perfiles de usuarios registrados (nombres, correos).
+- Borradores editoriales y contenido no publicado.
+- Registros de auditoría y actividad del CMS.
+- Tokens de sesión y estado de autenticación.
 
-### Response SLAs
+**Controles:** Cifrado en tránsito. Acceso regulado por políticas a nivel de base de datos. Procesamiento exclusivo en servidor. Expiración automática.
 
-| Action | Timeline |
-|---|---|
-| Acknowledgment | **48 hours** |
-| Initial assessment | **72 hours** |
-| Patch development | **7 days** (critical), **14 days** (high), **30 days** (medium/low) |
-| Public disclosure | After patch is deployed and verified |
+### Nivel 3 — Público (Protección Estándar)
 
-### Safe Harbor
+- Artículos y contenido multimedia publicado.
+- Contenido informativo de la plataforma.
+- Métricas analíticas agregadas y anonimizadas.
 
-We will not pursue legal action against security researchers who:
-
-- Act in good faith
-- Avoid data destruction or service disruption
-- Do not access data beyond what is necessary to demonstrate the vulnerability
-- Report findings promptly and confidentially
+**Controles:** Validación de integridad. Distribución mediante red de contenido. Sin información personal embebida.
 
 ---
 
-## ✅ Security Checklist (Development)
+## 5. Controles de Seguridad
 
-All code contributions must satisfy:
+### 5.1. Autenticación y Control de Acceso
 
-- [ ] No hardcoded secrets, API keys, or credentials
-- [ ] No `console.log` statements with sensitive data
-- [ ] RLS policies verified on any new/modified tables
-- [ ] Input validation on all new endpoints
-- [ ] Server-side auth checks on all protected routes
-- [ ] No `any` types in auth/security-related code
-- [ ] Dependencies audited (`npm audit`)
-- [ ] No `.env` files in staging or commits
+- Gestión de sesiones exclusivamente en servidor — no se exponen tokens en el navegador.
+- Políticas de aislamiento de datos (Row-Level Security) aplicadas a nivel de base de datos sobre todas las tablas.
+- Control de acceso basado en roles: `testigo`, `reportero`, `verificador`, `periodista`, `admin`.
+- Verificación de autorización en servidor para todas las rutas protegidas y acciones editoriales.
+- Ninguna decisión de autorización se delega al cliente.
 
----
+### 5.2. Protección de Datos
 
-## 📋 Supported Versions
+- Todos los secretos de infraestructura se gestionan mediante variables de entorno — cero credenciales en código.
+- Comunicación cifrada (HTTPS) en todos los puntos de acceso.
+- Validación de entrada en todos los formularios y acciones del servidor.
+- Sanitización de salida para prevenir inyección de código y ataques cross-site.
 
-| Version | Supported |
-|---------|-----------|
-| Latest  | ✅        |
-| < 1.0   | ❌        |
+### 5.3. Protección de Fuentes
 
----
+- **Minimización de datos:** Solo se recopila la información estrictamente necesaria para el funcionamiento del sistema.
+- **Sin registro de direcciones IP** en los formularios de reporte.
+- **Eliminación de metadatos** en contenido enviado por los ciudadanos.
+- **La confidencialidad periodista-fuente es un requisito de arquitectura**, no una decisión discrecional.
 
-## 🔄 Security Review Cadence
-
-| Review Type | Frequency |
-|---|---|
-| Dependency audit (`npm audit`) | Every commit (CI) |
-| Dependabot alerts | Continuous |
-| RLS policy review | Every schema migration |
-| Full security assessment | Quarterly |
-| Penetration testing | Pre-launch, then annually |
+Estos principios se alinean con el Artículo 19 del PIDCP, la Observación General Nº 34 del Comité de DDHH de la ONU, y los Principios de Tshwane sobre seguridad nacional y derecho a la información.
 
 ---
 
-_Last updated: 2026-03-25_
-_Maintainer: Luis Sambrano — [security@luissambrano.dev](mailto:security@luissambrano.dev)_
+## 6. Respuesta a Incidentes
+
+### 6.1. Protocolo
+
+| Fase | Acción | Tiempo de respuesta |
+|:---|:---|:---|
+| **Detección** | Monitoreo continuo, detección de anomalías, reportes de usuarios | Continuo |
+| **Evaluación** | Clasificación de severidad (Crítica / Alta / Media / Baja) | < 1 hora |
+| **Contención** | Aislamiento de sistemas afectados, revocación de credenciales comprometidas | < 4 horas |
+| **Erradicación** | Análisis de causa raíz, despliegue de corrección | < 24 horas |
+| **Recuperación** | Restauración de servicio, verificación de integridad de datos | < 48 horas |
+| **Análisis posterior** | Documentación interna, medidas preventivas | < 7 días |
+
+### 6.2. Clasificación de Severidad
+
+- **Crítica:** Filtración de datos de fuentes o testigos, compromiso de autenticación, caída de producción.
+- **Alta:** Escalamiento de privilegios, exposición de datos sensibles, ejecución de código malicioso en páginas autenticadas.
+- **Media:** Divulgación de información no personal, falsificación de solicitudes, redirecciones abiertas.
+- **Baja:** Violaciones de mejores prácticas, filtraciones menores de información no clasificada.
+
+---
+
+## 7. Divulgación Responsable de Vulnerabilidades
+
+### 7.1. Cómo reportar
+
+Si descubre una vulnerabilidad de seguridad en la plataforma:
+
+1. **NO** cree un Issue público en GitHub.
+2. **NO** divulgue la vulnerabilidad públicamente antes de que sea corregida.
+3. Envíe un correo a: **soyluissambrano@gmail.com**
+
+### 7.2. Información a incluir
+
+- Pasos para reproducir la vulnerabilidad.
+- Evaluación de impacto (qué datos o sistemas se ven afectados).
+- Corrección sugerida (si aplica).
+- Su información de contacto para seguimiento.
+
+### 7.3. Tiempos de Respuesta
+
+| Acción | Plazo |
+|:---|:---|
+| Confirmación de recepción del reporte | **48 horas** |
+| Evaluación inicial | **72 horas** |
+| Desarrollo de corrección | **7 días** (crítica), **14 días** (alta), **30 días** (media/baja) |
+| Divulgación pública | Posterior al despliegue y verificación de la corrección |
+
+### 7.4. Protección al Investigador (Safe Harbor)
+
+No se emprenderán acciones legales contra investigadores de seguridad que:
+
+- Actúen de buena fe.
+- Eviten la destrucción de datos o la interrupción del servicio.
+- No accedan a datos más allá de lo necesario para demostrar la vulnerabilidad.
+- Reporten los hallazgos de forma oportuna y confidencial.
+
+Esta disposición se alinea con las mejores prácticas de divulgación coordinada de vulnerabilidades establecidas por FIRST (Forum of Incident Response and Security Teams) y con los estándares ISO/IEC 29147.
+
+---
+
+## 8. Revisiones de Seguridad
+
+| Tipo de revisión | Frecuencia |
+|:---|:---|
+| Auditoría de dependencias | En cada integración de código |
+| Monitoreo de alertas de seguridad | Continuo |
+| Revisión de políticas de aislamiento de datos | En cada cambio de esquema |
+| Evaluación completa de seguridad | Trimestral |
+| Pruebas de penetración | Pre-lanzamiento, luego anual |
+
+---
+
+*Última actualización: 25 de marzo de 2026*  
+*Responsable: Luis Sambrano — soyluissambrano@gmail.com*

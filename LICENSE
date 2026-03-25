@@ -1,75 +1,55 @@
-Business Source License 1.1
+# Licencia — Libertad VZLA
 
-Parameters
+## Business Source License 1.1 (BSL 1.1)
 
-Licensor: Luis Sambrano
-Licensed Work: Libertad VZLA
-The Licensed Work is (c) 2026 Luis Sambrano
-
-Additional Use Grant: You may use the Licensed Work for: - Personal, non-commercial projects - Educational and learning purposes - Contributing improvements back to this repository
-
-Change Date: 2030-02-03 (Four years from initial release)
-
-Change License: MIT License
-
-Use Limitation: The Licensed Work may NOT be used: - For production commercial services - To create competing products or services - In any revenue-generating application - As a service offered to third parties - To train AI/ML models for commercial purposes
+**Licenciante:** Luis Sambrano  
+**Software con licencia:** Libertad VZLA  
+**Fecha de otorgamiento de la licencia:** 1 de marzo de 2026  
+**Fecha de cambio de licencia:** 1 de marzo de 2030  
+**Licencia de cambio:** GNU General Public License v2.0 o posterior
 
 ---
 
-Notice
+## 1. Términos de la Licencia
 
-The Business Source License (this document, or the "License") is not an
-Open Source license. However, the Licensed Work will eventually be made
-available under an Open Source License, as stated in this License.
+### 1.1. Concesión de Derechos
 
-License text copyright (c) 2017 MariaDB Corporation Ab, All Rights Reserved.
-"Business Source License" is a trademark of MariaDB Corporation Ab.
+Sujeto a los términos y condiciones de esta Licencia, el Licenciante otorga al Licenciatario un derecho no exclusivo, mundial y libre de regalías para copiar, modificar, crear obras derivadas, redistribuir y hacer uso no productivo del Software con licencia.
 
----
+### 1.2. Limitación de Uso
 
-Terms
+El Licenciatario **no podrá** utilizar el Software con licencia para un **Uso de Producción** sin el consentimiento previo por escrito del Licenciante.
 
-The Licensor hereby grants you the right to copy, modify, create derivative
-works, redistribute, and make non-production use of the Licensed Work. The
-Licensor may make an Additional Use Grant, above, permitting limited
-production use.
+**Uso de Producción** se define como el uso del Software con licencia para propósitos que no sean de evaluación interna, desarrollo, pruebas o propósitos educativos. Esto incluye, sin limitación: ofrecer el Software como servicio, integrarlo en productos comerciales o utilizar sus funcionalidades en entornos de producción orientados a usuarios finales.
 
-Effective on the Change Date, or the fourth anniversary of the first publicly
-available distribution of a specific version of the Licensed Work under this
-License, whichever comes first, the Licensor hereby grants you rights under
-the terms of the Change License, and the rights granted in the paragraph
-above terminate.
+### 1.3. Fecha de Cambio
 
-If your use of the Licensed Work does not comply with the requirements
-currently in effect as described in this License, you must purchase a
-commercial license from the Licensor, its affiliated entities, or authorized
-resellers, or you must refrain from using the Licensed Work.
-
-All copies of the original and modified Licensed Work, and derivative works
-of the Licensed Work, are subject to this License. This License applies
-separately for each version of the Licensed Work and the Change Date may vary
-for each version of the Licensed Work released by Licensor.
-
-You must conspicuously display this License on each original or modified copy
-of the Licensed Work. If you receive the Licensed Work in original or
-modified form from a third party, the terms and conditions set forth in this
-License apply to your use of that work.
-
-Any use of the Licensed Work in violation of this License will automatically
-terminate your rights under this License for the current and all other
-versions of the Licensed Work.
-
-This License does not grant you any right in any trademark or logo of
-Licensor or its affiliates (provided that you may use a trademark or logo of
-Licensor as expressly required by this License).
-
-TO THE EXTENT PERMITTED BY APPLICABLE LAW, THE LICENSED WORK IS PROVIDED ON
-AN "AS IS" BASIS. LICENSOR HEREBY DISCLAIMS ALL WARRANTIES AND CONDITIONS,
-EXPRESS OR IMPLIED, INCLUDING (WITHOUT LIMITATION) WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, AND
-TITLE.
+A partir de la **Fecha de Cambio** (1 de marzo de 2030), el Software con licencia estará disponible bajo los términos de la **Licencia de Cambio** (GNU General Public License v2.0 o posterior), y los términos de esta BSL 1.1 dejarán de aplicarse.
 
 ---
 
-For commercial licensing inquiries: luis@luissambrano.com
-Repository: https://github.com/LuisSambrano/libertad
+## 2. Exclusiones y Aclaraciones
+
+- Esta licencia **no otorga** ningún derecho sobre marcas comerciales, nombres comerciales, logotipos o identidad visual asociada al proyecto Libertad VZLA.
+- Los datos almacenados por la plataforma (artículos, reportes, registros del Registro de Memoria Cívica) **no están cubiertos** por esta licencia de software. La gestión, distribución y protección de dichos datos se rige por la [Política de Seguridad](SECURITY.md) del proyecto.
+- Las contribuciones de terceros al proyecto quedan sujetas a los términos de esta misma licencia, según lo establecido en [CONTRIBUCIÓN.md](CONTRIBUTING.md).
+
+---
+
+## 3. Descargo de Responsabilidad
+
+EL SOFTWARE SE PROPORCIONA "TAL CUAL", SIN GARANTÍA DE NINGÚN TIPO, EXPRESA O IMPLÍCITA, INCLUYENDO PERO NO LIMITÁNDOSE A LAS GARANTÍAS DE COMERCIALIZACIÓN, IDONEIDAD PARA UN PROPÓSITO PARTICULAR Y NO INFRACCIÓN. EN NINGÚN CASO LOS AUTORES O TITULARES DE DERECHOS SERÁN RESPONSABLES DE NINGUNA RECLAMACIÓN, DAÑO U OTRA RESPONSABILIDAD, YA SEA EN UNA ACCIÓN CONTRACTUAL, EXTRACONTRACTUAL O DE OTRO TIPO, QUE SURJA DE, EN CONEXIÓN CON EL SOFTWARE O EL USO U OTRAS OPERACIONES CON EL SOFTWARE.
+
+---
+
+## 4. Referencia al Texto Original
+
+Esta licencia es una adaptación en español para fines de comprensión. El texto legal vinculante de la Business Source License 1.1 se encuentra disponible en:
+
+🔗 [mariadb.com/bsl11](https://mariadb.com/bsl11/)
+
+En caso de discrepancia entre esta adaptación y el texto original en inglés, prevalecerá el texto original.
+
+---
+
+*Última actualización: 25 de marzo de 2026*
