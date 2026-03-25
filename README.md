@@ -8,6 +8,10 @@
   <img src="https://img.shields.io/badge/Licencia-BSL_1.1-red?style=for-the-badge" alt="Licencia"/>
 </p>
 
+<p align="center">
+  <em>Plataforma de periodismo ciudadano diseñada para recolectar, verificar y preservar evidencia en entornos donde la información es censurada o manipulada.</em>
+</p>
+
 ---
 
 ## 1. Qué es Libertad VZLA
@@ -19,6 +23,20 @@ El sistema recibe reportes directos de ciudadanos, los contrasta con fuentes doc
 No es un medio de opinión. No es un blog. Es infraestructura cívica para el ejercicio del derecho a la información, construida para resistir.
 
 **Acceso público:** [libertadvzla.vercel.app](https://libertadvzla.vercel.app)
+
+### La plataforma en funcionamiento
+
+<p align="center">
+  <img src="./docs/preview_hero.png" alt="Interfaz principal con countdown activo" width="720"/>
+</p>
+
+<p align="center">
+  <img src="./docs/preview_stats.png" alt="Métricas operativas: artículos, cobertura, verificación" width="720"/>
+</p>
+
+<p align="center">
+  <img src="./docs/preview_auth.png" alt="Registro con seudonimato — la identidad real permanece privada" width="720"/>
+</p>
 
 ---
 
@@ -117,6 +135,21 @@ gantt
     Lanzamiento público — 1 de mayo de 2026                :         l1, 2026-05-01, 2026-05-01
     Operación continua y expansión de la red               :         l2, 2026-05-01, 2026-12-31
 ```
+
+### Estado actual (Marzo 2026)
+
+| Estado | Componente |
+|:-------|:-----------|
+| ✔ Operativo | Plataforma desplegada y accesible públicamente |
+| ✔ Operativo | Sistema de registro con seudonimato funcional |
+| ✔ Operativo | Flujo de publicación editorial con verificación |
+| ✔ Operativo | Sistema de almacenamiento y recuperación de datos |
+| ✔ Operativo | Autenticación con separación de identidad pública/privada |
+| ⚠ En expansión | Red de verificación ciudadana |
+| ⚠ En pruebas | Registro de Memoria Cívica |
+
+**Próximo hito:** 1 de abril de 2026 — Beta cerrada (abogados, psicólogos, periodistas, ciudadanos comprometidos)
+**Lanzamiento público:** 1 de mayo de 2026
 
 ---
 
@@ -242,9 +275,40 @@ La selección de cada componente respondió a un criterio: **resiliencia operati
 | **Distribución global sin dependencia local** | La plataforma no utiliza servidores ubicados en Venezuela. El contenido se distribuye desde múltiples puntos geográficos con protección inherente contra ataques de denegación de servicio. |
 | **Registro de auditoría** | Todas las acciones críticas quedan registradas con marcas temporales e identificación del actor responsable. |
 
+### 5.2. Decisiones de diseño
+
+El sistema no se documenta por las tecnologías que usa, sino por las decisiones que lo rigen:
+
+- **Validación en backend, no en cliente.** Toda regla de negocio se ejecuta en el servidor. El navegador no toma decisiones sobre acceso, permisos ni integridad de datos. Esto elimina la posibilidad de manipulación desde el lado del usuario.
+- **Persistencia con control de integridad y auditoría.** Cada operación de escritura genera un registro inmutable con marca temporal, actor responsable y contexto de la acción. No existe operación silenciosa.
+- **Separación estricta entre input ciudadano y capa de verificación.** Un reporte ciudadano nunca se publica directamente. Pasa por nodos de decisión algorítmica y humana antes de alcanzar el estado de publicación.
+- **Identidad fragmentada.** La identidad pública (seudónimo) y la identidad privada (datos reales) se almacenan en capas separadas con políticas de acceso independientes. Ningún rol puede acceder a ambas simultáneamente.
+- **Distribución sin presencia local.** La infraestructura no depende de servidores ubicados en Venezuela. El contenido se distribuye desde múltiples puntos geográficos resistentes a órdenes de remoción jurisdiccional.
+
+El sistema se desarrolla bajo prácticas de ingeniería orientadas a resiliencia: validación estricta de datos, tipado completo sin excepciones y pruebas automatizadas en el entorno de desarrollo privado.
+
 ---
 
-## 6. Postura de Seguridad
+## 6. Modelo de Confianza
+
+Libertad VZLA no requiere que el usuario confíe en la plataforma. El diseño asume un entorno hostil donde:
+
+- La información puede ser manipulada antes de llegar al sistema.
+- Los actores que interactúan con la plataforma pueden ser maliciosos.
+- La infraestructura puede ser atacada, intervenida o presionada legalmente.
+
+Por ello, el sistema prioriza:
+
+| Principio | Implementación |
+|:----------|:---------------|
+| **Minimización de exposición** | No se almacena información de identificación personal innecesaria. Los datos de Nivel 1 (identidad de fuentes) están cifrados en reposo y en tránsito. |
+| **Separación de responsabilidades** | Ningún rol tiene acceso simultáneo a datos editoriales, identidad de fuentes y configuración de infraestructura. |
+| **Verificación progresiva** | Un dato no se considera verdadero por defecto. Atraviesa nodos de verificación sucesivos antes de alcanzar estado publicable. |
+| **Aislamiento de fallos** | Un componente comprometido no puede propagar el daño al resto del sistema. Las capas operan con límites de confianza explícitos. |
+
+---
+
+## 7. Postura de Seguridad
 
 La plataforma opera bajo la premisa de que sus fuentes podrían enfrentar represalias si su participación fuera expuesta. Las decisiones de seguridad están documentadas en detalle en [SECURITY.md](./SECURITY.md).
 
@@ -260,7 +324,7 @@ Consulte [SECURITY.md](./SECURITY.md) para información completa sobre nuestro m
 
 ---
 
-## 7. Licencia y Participación
+## 8. Licencia y Participación
 
 El código fuente de Libertad VZLA es propietario bajo licencia **Business Source License 1.1 (BSL 1.1)**. El acceso al repositorio de desarrollo es por invitación.
 
@@ -268,7 +332,7 @@ Consulte [CONTRIBUTING.md](./CONTRIBUTING.md) para conocer nuestro modelo de par
 
 ---
 
-## 8. Contacto
+## 9. Contacto
 
 📧 **soyluissambrano@gmail.com**
 
