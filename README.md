@@ -27,6 +27,10 @@ No es un medio de opinión. No es un blog. Es infraestructura cívica para el ej
 ### La plataforma en funcionamiento
 
 <p align="center">
+  <img src="./docs/demo_flujo.webp" alt="Demo interactivo: Registro y participación en entorno seguro" width="720"/>
+</p>
+
+<p align="center">
   <img src="./docs/preview_hero.png" alt="Interfaz principal con countdown activo" width="720"/>
 </p>
 
@@ -169,24 +173,27 @@ La plataforma no funciona como un medio tradicional con redacción cerrada. Impl
 
 Cada reporte que supera el proceso de verificación genera **+50 puntos de experiencia** para su autor. Esos puntos construyen un **índice de confianza** interno, medible y auditable. El sistema prioriza información de fuentes con historial comprobado, sin necesidad de conocer la identidad civil del ciudadano.
 
-### 4.2. Cómo reportar un hecho
+### 4.2. Cómo funciona el sistema ("Flujo ciudadano")
 
-Si eres testigo de un hecho de interés público en Venezuela, este es el proceso para documentarlo a través de la plataforma:
+Si eres testigo de un hecho de interés público en Venezuela, el sistema procesa tu información bajo estas garantías:
 
-**Paso 1 — Crear una cuenta verificada.**  
-Accede a [libertadvzla.vercel.app](https://libertadvzla.vercel.app) y registra una cuenta. No se requiere nombre real. La verificación se realiza por correo electrónico y no se almacena información de identificación personal innecesaria.
+1. **Ingreso y Separación:** El ciudadano envía el reporte. Inmediatamente, la plataforma separa su identidad (la cual cifra y aísla) del contenido del reporte para evitar correlaciones de ataque.
+2. **Validación Asimétrica:** Todo esquema, metadata e integridad se verifica en el servidor. El cliente no procesa reglas, evitando cualquier manipulación en navegador.
+3. **Búsqueda Algorítmica y Triangulación:** El nuevo reporte se transforma vectorialmente y se compara con el archivo histórico. El motor agrupa reportes del mismo evento y detecta anomalías.
+4. **Revisión Aislada:** El caso anonimizado pasa a la cola de un periodista verificado, quien inicia el protocolo de contraste (mínimo, requerir dos fuentes cruzadas comprobables).
+5. **Consolidación e Inmutabilidad:** Al verificarse, genera un hash inmutable. La información publicable sale al mundo; la identidad de las fuentes jamás. Se asignan +50 Puntos de Confianza al autor.
 
-**Paso 2 — Acceder al formulario de reporte.**  
-Desde tu panel como Testigo, selecciona "Nuevo Reporte". El formulario te pedirá:
-- **Descripción del hecho:** Qué ocurrió, dónde, cuándo y quiénes estuvieron involucrados.
-- **Categoría:** Detención arbitraria, acto de censura, restricción de acceso, violación de derechos, otro.
-- **Material de soporte (opcional pero recomendado):** Fotografías, capturas de pantalla, documentos, enlaces a publicaciones relevantes.
+### 4.3. Ejemplo de uso real en contexto
 
-**Paso 3 — Envío.**  
-El reporte se transmite de forma segura al equipo editorial. Tu identidad queda protegida — el equipo de verificación trabaja con el contenido del reporte, no con la información personal del remitente.
+**Escenario:** Documentación de un operativo o detención irregular sin acceso a grandes medios.
 
-**Paso 4 — Verificación.**  
-Tu reporte ingresa al flujo de verificación descrito a continuación. Si es aprobado y publicado, recibirás +50 XP y una notificación. Si se requiere más documentación, la plataforma te lo indicará de forma privada.
+- **La situación:** Un ciudadano, desde un barrio intervenido, presencia detenciones en bloque. 
+- **La acción:** Abre su sesión bajo seudónimo en *Libertad VZLA*. Sube 2 fotos y redacta un reporte de contexto. Cierra la sesión inmediatamente.
+- **La respuesta del sistema:**
+  1. El sistema sanitiza las imágenes, eliminando la metadata EXIF localmente y extrayendo las horas del pixelado, para finalmente cifrarlas.
+  2. El algoritmo detecta otros dos reportes en la misma ubicación que ocurrieron con 15 minutos de diferencia. Cruza la información.
+  3. Crea un macro-evento y levanta una alerta naranja en la mesa editorial.
+  4. Los periodistas y voluntarios contactan fuentes oficiales. Al verificar que las personas han desaparecido del retén principal, se activa un "Registro de Memoria Cívica" protegiendo la visibilidad para las agrupaciones legales.
 
 ### 4.3. El flujo de verificación
 
@@ -289,13 +296,13 @@ El sistema se desarrolla bajo prácticas de ingeniería orientadas a resiliencia
 
 ---
 
-## 6. Modelo de Confianza
+## 6. Principios de diseño en entorno hostil
 
-Libertad VZLA no requiere que el usuario confíe en la plataforma. El diseño asume un entorno hostil donde:
+Libertad VZLA no requiere que el usuario confíe en la plataforma. El diseño abandona la hipótesis del "entorno ideal" y asume un estado operativo inherentemente hostil, donde:
 
-- La información puede ser manipulada antes de llegar al sistema.
-- Los actores que interactúan con la plataforma pueden ser maliciosos.
-- La infraestructura puede ser atacada, intervenida o presionada legalmente.
+- La información intentará ser manipulada *antes* de llegar al sistema.
+- Los actores que interactúan con la plataforma y pretenden enviar reportes podrían ser maliciosos o bots organizados.
+- La infraestructura enfrenta vigilancia de Estado (DPI, DNS poisoning) y riesgos reales de incautación.
 
 Por ello, el sistema prioriza:
 
