@@ -27,20 +27,12 @@ No es un medio de opinión. No es un blog. Es infraestructura cívica para el ej
 ### La plataforma en funcionamiento
 
 <p align="center">
-  <img src="./docs/demo_flujo.webp" alt="Demo interactivo: Registro y participación en entorno seguro" width="720"/>
+  <img src="./docs/preview_hero.png" alt="Plataforma de inicio" width="32%"/>
+  <img src="./docs/preview_stats.png" alt="Estadísticas de verificación" width="32%"/>
+  <img src="./docs/preview_auth.png" alt="Registro seguro con seudonimato" width="32%"/>
 </p>
 
-<p align="center">
-  <img src="./docs/preview_hero.png" alt="Interfaz principal con countdown activo" width="720"/>
-</p>
 
-<p align="center">
-  <img src="./docs/preview_stats.png" alt="Métricas operativas: artículos, cobertura, verificación" width="720"/>
-</p>
-
-<p align="center">
-  <img src="./docs/preview_auth.png" alt="Registro con seudonimato — la identidad real permanece privada" width="720"/>
-</p>
 
 ---
 
