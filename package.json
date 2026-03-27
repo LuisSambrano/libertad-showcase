@@ -1,0 +1,27 @@
+{
+  "name": "libertad-showcase",
+  "version": "1.0.0",
+  "description": "<div align=\"center\">   <img src=\"https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=2,6,11&height=200&section=header&text=Libertad%20VZLA&fontSize=50&fontColor=fff&animation=twinkling&fontAlignY=35&desc=Periodismo%20Ciudadano%20Verificado&descSize=18&descAlignY=55\"/> </div>",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuisSambrano/libertad-showcase.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/LuisSambrano/libertad-showcase/issues"
+  },
+  "homepage": "https://github.com/LuisSambrano/libertad-showcase#readme",
+  "dependencies": {
+    "pngjs": "^7.0.0"
+  }
+}

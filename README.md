@@ -9,18 +9,18 @@
 </p>
 
 <p align="center">
-  <em>Plataforma de periodismo ciudadano diseñada para recolectar, verificar y preservar evidencia en entornos donde la información es censurada o manipulada.</em>
+  <em>Plataforma de periodismo ciudadano verificado para Venezuela. Recolecta, verifica y preserva reportes documentales en entornos donde la información independiente es restringida.</em>
 </p>
 
 ---
 
 ## 1. Qué es Libertad VZLA
 
-**Libertad VZLA** es una plataforma de periodismo ciudadano y verificación documental diseñada para funcionar en entornos donde el acceso a la información independiente está activamente restringido por el Estado.
+**Libertad VZLA** es una plataforma de periodismo ciudadano y verificación documental diseñada para operar en entornos donde el acceso a la información independiente es restringido.
 
 El sistema recibe reportes directos de ciudadanos, los contrasta con fuentes documentales y registros históricos, aplica capas de verificación — tanto algorítmica como humana — y publica información contrastada de interés público.
 
-No es un medio de opinión. No es un blog. Es infraestructura cívica para el ejercicio del derecho a la información, construida para resistir.
+No es un medio de opinión. No es un blog. Es una plataforma de verificación documental que procesa reportes ciudadanos.
 
 **Acceso público:** [libertadvzla.vercel.app](https://libertadvzla.vercel.app)
 
